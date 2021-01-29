@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "vidly_jwtPrivateKey",
+  "db":"mongodb://misan1:1234@cluster0-shard-00-00-34d9x.mongodb.net:27017,cluster0-shard-00-01-34d9x.mongodb.net:27017,cluster0-shard-00-02-34d9x.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
+}
