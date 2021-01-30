@@ -26,6 +26,13 @@ function checkRequirements(object) {
 
     if (typeof value == "string" && value.includes('.')) {
         const arr = value.split(".")
+        if (arr.length > 2) {
+            return {
+                "message": `field ${value} is not supported. Nesting of objects greater 2 is not allowed`,
+                "status": "error",
+                "data": null
+            }
+        }
         if (data.hasOwnProperty(arr[0]) == false || data[`${arr[0]}`].hasOwnProperty(arr[1]) == false) return {
             "message": `field ${value} is missing from data.`,
             "status": "error",
